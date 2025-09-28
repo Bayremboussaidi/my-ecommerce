@@ -1,4 +1,4 @@
-package com.ecommerce.enums;
+package com.example.notification_service.enums;
 
 public enum NotificationType {
     ORDER_CONFIRMATION,

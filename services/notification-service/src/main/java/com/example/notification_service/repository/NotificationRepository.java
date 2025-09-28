@@ -1,6 +1,6 @@
-package com.ecommerce.repository;
+package com.example.notification_service.repository;
 
-import com.ecommerce.entity.Notification;
+import com.example.notification_service.entity.Notification;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
