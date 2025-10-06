@@ -8,3 +8,7 @@ import lombok.EqualsAndHashCode;
 public class CustomerNotFoundException extends RuntimeException {
     private final String message;
 }
+
+
+
+

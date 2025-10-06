@@ -1,11 +1,12 @@
-package com.ecommerce.client.customer;
 
-import com.ecommerce.client.customer.dto.CustomerResponse;
+
+import java.util.Optional;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.Optional;
+import com.ecommerce.client.customer.dto.CustomerResponse;
 
 @FeignClient(name="customer-service",url = "${application.config.customer-url}")
 public interface CustomerClient {

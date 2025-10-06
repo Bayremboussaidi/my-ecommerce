@@ -4,7 +4,7 @@ import com.example.customer_service.dto.ResponseMessage;
 import com.example.customer_service.dto.CustomerRequest;
 import com.example.customer_service.dto.CustomerResponse;
 import com.example.customer_service.entity.Customer;
-import com.example.customer_service.exception.CustomerNotFoundException;
+import com.example.customer_service.excep.CustomerNotFoundException;
 import com.example.customer_service.mapper.CustomerMapper;
 import com.example.customer_service.repository.CustomerRepository;
 import org.apache.commons.lang3.StringUtils;
@@ -20,6 +20,11 @@ import static java.lang.String.format;
 public class CustomerService {
     private final CustomerRepository customerRepository;
     private final CustomerMapper customerMapper;
+
+    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper) {
+        this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
+    }
 
     public CustomerResponse createCustomer(CustomerRequest customerRequest) {
         Customer customer = customerMapper.toCustomer(customerRequest);
